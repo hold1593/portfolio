@@ -1,3 +1,4 @@
+/* Global */
 :root {
   /* Color */
   --primary-color: #9fa8da;
@@ -8,16 +9,26 @@
   --white-color: #ffffff;
 
   /* Font Size */
-  --font-size-small: 13px;
-  --font-size-medium: 16px;
-  --font-size-large: 18px;
+  --font-micro: 14px;
+  --font-small: 16px;
+  --font-regular: 18px;
+  --font-medium: 28px;
+  --font-large: 48px;
 
-  /* padding */
+  /* Font weight */
+  --weight-light: 200;
+  --weight-regular: 400;
+  --weight-semi-bold: 600;
+  --weight-bold: 700;
+
+  font-family: 'Titillium Web', sans-serif;
+
+  /* Size */
   --padding: 15px;
 }
 
 * {
-  margin: 0;
+  box-sizing: border-box;
 }
 body {
 
@@ -35,6 +46,10 @@ body {
   width: 45px;
   margin: 0 var(--padding);
   cursor: pointer;
+}
+.navbar__logo img:hover{
+  transform: rotate(30deg);
+  transition: transform 500ms ease;
 }
 .navbar__logo a {
   text-decoration: none;
