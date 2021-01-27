@@ -7,6 +7,10 @@
   --secondary: #e8eaf6;
   --secondary-dark-color: #b6b8c3;
   --white-color: #ffffff;
+  --black-color:#000000;
+  --dark-grey-color: #4d4d4d;
+  --grey-color: #616161;
+  --light-grey-color: #7c7979;
 
   /* Font Size */
   --font-micro: 14px;
@@ -21,14 +25,40 @@
   --weight-semi-bold: 600;
   --weight-bold: 700;
 
-  font-family: 'Titillium Web', sans-serif;
-
+  /* font-family: 'Titillium Web', sans-serif;
+ */
   /* Size */
   --padding: 15px;
 }
-
+/* Universal tags */
 * {
   box-sizing: border-box;
+}
+
+/* Typography */
+h1 {
+  font-size: var(--font-large);
+  font-weight: var(--weight-bold);
+  color: var(--black-color);
+  margin: 16px 0;
+}
+h2 {
+  font-size: var(--font-medium);
+  font-weight: var(--weight-semi-bold);
+  color: var(--black-color);
+  margin: 8px 0;
+}
+h3 {
+  font-size: var(--font-regular);
+  font-weight: var(--weight-regular);
+  color: var(--black-color);
+  margin: 8px 0;
+}
+p {
+  font-size: var(--font-regular);
+  font-weight: var(--weight-light);
+  color: var(--black-color);
+  margin: 4px 0;
 }
 body {
 
