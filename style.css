@@ -1,3 +1,55 @@
-.about__photo--img{
-  background-color: #d69c9c;
+:root {
+  /* Color */
+  --primary-color: #9fa8da;
+  --primary-light-color: #d1d9ff;
+  --primary-dark-color: #6f79a8;
+  --secondary: #e8eaf6;
+  --secondary-dark-color: #b6b8c3;
+  --white-color: #ffffff;
+
+  /* Font Size */
+  --font-size-small: 13px;
+  --font-size-medium: 16px;
+  --font-size-large: 18px;
+
+  /* padding */
+  --padding: 15px;
 }
+
+* {
+  margin: 0;
+}
+body {
+
+}
+/* Navbar */
+#navbar {
+  display: flex;
+  background-color: var(--primary-color);
+  justify-content: space-between;
+}
+.navbar__logo {
+  align-items: center;
+}
+.navbar__logo img {
+  width: 45px;
+  margin: 0 var(--padding);
+  cursor: pointer;
+}
+.navbar__logo a {
+  text-decoration: none;
+  color: var(--white-color);
+}
+.navbar__menu {
+  list-style: none;
+  display: flex;
+  align-items: center; 
+}
+.navbar__menu .navbar__menu__item {
+  margin: var(--padding);
+}
+
+/* Home */
+#home {
+}
+
