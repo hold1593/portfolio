@@ -19,7 +19,14 @@ navbarMenu.addEventListener('click', (event) => {
   if (link == null) {
     return;
   }
+  navbarMenu.classList.remove('open');
   scrollIntoView(link);
+});
+
+// Nabvar 토글
+const navbarToggleBtn = document.querySelector('.navbar__toggle-btn');
+navbarToggleBtn.addEventListener('click',() => {
+  navbarMenu.classList.toggle('open');
 });
 
 // Contact Me 버튼 연결
@@ -64,7 +71,7 @@ workBtnContainer.addEventListener('click', (e) => {
   const active = document.querySelector('.category__btn.selected');
   active.classList.remove('selected');
   e.target.classList.add('selected');
-  
+
   projectContainer.classList.add('anim-out');
   setTimeout(() => {
     projects.forEach((project) => {
