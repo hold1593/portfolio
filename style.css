@@ -91,6 +91,7 @@ p {
   font-weight: var(--weight-regular);
   color: var(--black-color);
   margin: 4px 0;
+  word-break: keep-all;
 }
 
 /* Navbar */
@@ -134,8 +135,8 @@ p {
 }
 .navbar__toggle-btn {
   position: absolute;
-  top: 23px;
-  right: 32px;
+  top: 15px;
+  right: 30px;
   font-size: 28px;
   color: var(--white-color);
   display: none;
@@ -167,6 +168,9 @@ p {
   padding: 8px 12px;
   border: 2px solid var(--white-color);
   border-radius: var(--size-border-radius);
+}
+.home__contact:hover {
+  background-color: var(--secondary-color);
 }
 /* Section common */
 .section {
@@ -369,14 +373,26 @@ p {
 
 /* 768 screen width */
 @media screen and (max-width: 768px) {
+  :root {
+    /* Font Size */
+  --font-micro: 12px;
+  --font-small: 14px;
+  --font-regular: 16px;
+  --font-medium: 18px;
+  --font-large: 30px;
+  }
+  h2 {
+    word-break:keep-all;
+  }
   p {
     font-size: var(--font-small);
     font-weight: var(--weight-light);
+    word-break: keep-all;
   }
   #navbar {
     flex-direction: column;
     align-items: flex-start;
-    background-color: var(--primary-color);
+    background-color: var(--primary-dark-color);
   }
   #navbar.navbar--dark {
     padding: 16px;
@@ -392,15 +408,24 @@ p {
   }
   .navbar__toggle-btn {
     display: block;
+    top: 20px;
+    right: 16px;
+    font-size: var(--font-medium);
+  }
+  .section {
+    padding: 16px;
+    padding-top: 40px;
   }
   #home{
     padding: 40px;
     padding-top: 100px;
   }
   .major {
-    margin-bottom: 38px;
+    margin-bottom: 30px;
   }
   .about__majors {
+    margin-top: 30px;
+    margin-bottom: 0px;
     flex-direction: column;
   }
   .skillset {
@@ -410,13 +435,13 @@ p {
     flex-grow: 1;
   }
   .category__btn {
-    align-items:center;
-    width: 100%;
-    flex-direction: column;
+    margin-bottom: 8px;
+    padding: 8px;
+    width: 90%;
   }
   .home__avatar {
-    width: 150px;
-    height: 150px;
+    width: 160px;
+    height: 160px;
   }
   .home__title, 
   .section h1 {
@@ -425,5 +450,12 @@ p {
   .home__description {
     font-size: calc(var(--font-regular)*1.2);
   }
-  
+  .upBtn {
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+    line-height: 45px;
+    right: 16px;
+    bottom: 16px;
+  }
 }
