@@ -11,6 +11,12 @@ document.addEventListener('scroll', () =>{
   }
 });
 
+// scroll 이벤트 함수 정의
+function scrollIntoView(selector) {
+  const scrollTo = document.querySelector(selector);
+  scrollTo.scrollIntoView({behavior: 'smooth'});
+}
+
 //  Navbar의 탭 해당구간 연결
 const navbarMenu = document.querySelector('.navbar__menu');
 navbarMenu.addEventListener('click', (event) => {
@@ -19,7 +25,11 @@ navbarMenu.addEventListener('click', (event) => {
   if (link == null) {
     return;
   }
-  console.log(event.target.dataset.link);
-  const scrollTo = document.querySelector(link);
-  scrollTo.scrollIntoView({behavior: 'smooth'});
+  scrollIntoView(link);
+});
+
+// Contact Me 버튼 연결
+const contactBtn = document.querySelector('.home__contact');
+contactBtn.addEventListener('click', () => {
+  scrollIntoView('#contact');
 });
