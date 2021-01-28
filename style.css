@@ -1,12 +1,11 @@
 /* Global */
 :root {
   /* Color */
-  --primary-color: #1b5e20;
-  --primary-light-color: #4c8c4a;
-  --primary-dark-color: #003300;
-  --secondary-color: #EFAA41;
-  --secondary-light-color: #b3a421;
-  --secondary-dark-color: #c29000;
+  --primary-color: #d7ccc8;
+  --primary-dark-color: #a69b97;
+  --secondary-color: #c5cae9;
+  --secondary-light-color: #f8fdff;
+  --secondary-dark-color: #9499b7;
   --white-color: #ffffff;
   --dark-white-color: #eeeeee;
   --black-color:#000000;
@@ -17,6 +16,7 @@
   --brown-color: #5d4037;
   --light-brown-color: #8b6b61;
   --dark-brown-color: #321911;
+  --dark-green-color: #94af76;
   
 
   /* Font Size */
@@ -95,12 +95,20 @@ p {
 
 /* Navbar */
 #navbar {
+  position: fixed;
+  width: 100%;
   display: flex;
-  background-color: var(--secondary-color);
+  background-color: transparent;
   justify-content: space-between;
   align-items: center;
   color: var(--white-color);
   padding: 16px;
+  transition: all var(--animation-duration) ease-in-out;
+  z-index: 1;
+}
+#navbar.navbar--dark {
+  background-color: var(--primary-dark-color);
+  padding: 4px;
 }
 .navbar__menu {
   display: flex;
@@ -110,7 +118,7 @@ p {
   font-weight: var(--weight-semi-bold);
 }
 .navbar__logo:hover{
-  color: var(--primary-color);
+  color: var(--primary-dark-color);
   transition: color var(--animation-duration) linear;
 }
 .navbar__menu__item{
@@ -136,15 +144,17 @@ p {
 }
 /* Home */
 #home {
-  background: url('imgs/background7.png') center/cover no-repeat;
+  background: url('imgs/background.png') center/cover no-repeat;
   padding: 40px;
+  padding-top: 120px;
   text-align: center;
-}
+} 
 .home__avatar {
+  margin-top: 30px;
   width: 250px;
   height: 250px;
   border-radius: 50%;
-  border: 2px solid var(--primary-color);
+  border: 2px solid var(--white-color);
 }
 .home__title,
 .home__description {
@@ -183,8 +193,8 @@ p {
   line-height: 170px;
   font-size: 70px;
   margin: auto;
-  color: var(--primary-light-color);
-  border: 1px solid var(--primary-color);
+  color: var(--secondary-dark-color);
+  border: 1px solid var(--secondary-dark-color);
   border-radius: 50%;
   margin-bottom: 16px;
 }
@@ -198,7 +208,7 @@ p {
 
 /* Skill */
 #skills {
-  background-color: var(--ligth-salmon-color);
+  background-color: var(--primary-color);
 }
 .skillset {
   display: flex;
@@ -229,7 +239,7 @@ p {
 .skill__value {
   width: 70%;
   height: 3px;
-  background-color: var(--secondary-color);
+  background-color: var(--ligth-salmon-color);
 }
 .skillset__right {
   flex-basis: 40%;
@@ -246,14 +256,14 @@ p {
   margin: 40px;
 }
 .category__btn {
-  border: 1px solid var(--light-grey-color);
+  border: 1px solid var(--primary-color);
   border-radius: var(--size-border-radius);
   font-size: var(--font-regular);
   padding: 8px 48px;
 }
 .category__btn.active,
 .category__btn:hover{
-  background-color: var(--primary-light-color);
+  background-color: var(--secondary-color);
   color: var(--white-color);
 }
 .work__projects {
@@ -310,7 +320,7 @@ p {
 
 /* Contact */
 #contact {
-  background-color: var(--primary-color);
+  background-color: var(--primary-dark-color);
 }
 .contact__title,
 .contact__email,
@@ -329,12 +339,15 @@ p {
 }
 .contact__links i:hover {
   transform: scale(1.1);
-  color: var(--secondary-color);
+  color: var(--dark-green-color);
 }
+
+
 /* 768 screen width */
 @media screen and (max-width: 768px) {
-  .navbar__toggle-btn {
-    display: block;
+  p {
+    font-size: var(--font-small);
+    font-weight: var(--weight-light);
   }
   #navbar {
     flex-direction: column;
@@ -346,11 +359,17 @@ p {
     width: 100%;
     display: none;
   }
-  .about__majors {
-    flex-direction: column;
+  .navbar__toggle-btn {
+    display: block;
+  }
+  #home{
+    padding: 40px;
   }
   .major {
     margin-bottom: 38px;
+  }
+  .about__majors {
+    flex-direction: column;
   }
   .skillset {
     flex-direction: column;
@@ -374,8 +393,5 @@ p {
   .home__description {
     font-size: calc(var(--font-regular)*1.2);
   }
-  p {
-    font-size: var(--font-small);
-    font-weight: var(--weight-light);
-  }
+ 
 }
