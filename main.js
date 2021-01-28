@@ -35,8 +35,27 @@ document.addEventListener('scroll', () => {
   home.style.opacity = 1 - window.scrollY / homeHeight;
 });
 
+// 스크롤링 시 upBtn 나타내기
+const upBtn = document.querySelector('.upBtn');
+document.addEventListener('scroll', () => {
+  if(window.scrollY > homeHeight / 2) {
+    upBtn.classList.add('showBtn');
+  }else{
+    upBtn.classList.remove('showBtn');
+  }
+});
+
+// upBtn 클릭 시 최상단으로 올라가기
+upBtn.addEventListener('click', () => {
+  scrollIntoView('#home');
+});
+
+
+
+
 // scroll 이벤트 함수 정의
 function scrollIntoView(selector) {
   const scrollTo = document.querySelector(selector);
   scrollTo.scrollIntoView({behavior: 'smooth'});
 }
+
