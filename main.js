@@ -59,6 +59,12 @@ workBtnContainer.addEventListener('click', (e) => {
   if(filter == null){
     return;
   }
+
+  // works: 선택한 버튼 클릭 시 해당 버튼 활성화
+  const active = document.querySelector('.category__btn.selected');
+  active.classList.remove('selected');
+  e.target.classList.add('selected');
+  
   projectContainer.classList.add('anim-out');
   setTimeout(() => {
     projects.forEach((project) => {
