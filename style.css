@@ -458,7 +458,8 @@ p {
     width: 45px;
     height: 45px;
     font-size: 20px;
-    line-height: 45px;
+    justify-content: center;
+    align-items: center;
     right: 16px;
     bottom: 16px;
   }
