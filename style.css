@@ -128,6 +128,10 @@ p {
   margin: 0 4px;
   cursor: pointer;
 }
+.navbar__menu__item.active {
+  border-bottom: 1px solid var(--white-color);
+}
+
 .navbar__menu__item:hover {
   border-bottom: 1px solid var(--white-color);
   transform: scale(1.2);
