@@ -358,14 +358,10 @@ p {
 }
 .upBtn{
   position: fixed;
-  bottom: 60px;
+  bottom: 20px;
   right: 20px;
-  width: 60px;
-  height: 60px;
-  font-size: 40px;
-  background-color: var(--light-brown-color);
-  color: var(--white-color);
-  border-radius: 50%;
+  font-size: 55px;
+  color: #4f4139;
   opacity: 0;
   pointer-events: none;
   transition: all var(--animation-duration) ease-in;
@@ -455,10 +451,7 @@ p {
     font-size: calc(var(--font-regular)*1.2);
   }
   .upBtn {
-    width: 45px;
-    height: 45px;
-    font-size: 20px;
-    line-height: 45px;
+    font-size: 40px;
     right: 16px;
     bottom: 16px;
   }
