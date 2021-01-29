@@ -364,7 +364,6 @@ p {
   height: 60px;
   font-size: 40px;
   background-color: var(--light-brown-color);
-  color: var(--white-color);
   border-radius: 50%;
   opacity: 0;
   pointer-events: none;
@@ -373,6 +372,9 @@ p {
 .upBtn.showBtn {
   opacity: 1;
   pointer-events: auto;
+}
+.top {
+  color: var(--white-color);
 }
 
 /* 768 screen width */
